@@ -1,0 +1,47 @@
+CUEBOTS PRICE STUDIO — OFFLINE
+
+1. Giải nén toàn bộ tệp ZIP.
+2. Mở index.html bằng Chrome, Edge hoặc Firefox. Không cần cài đặt hay chạy server.
+3. HTML, CSS, JS, font và danh sách 135 sản phẩm nằm trong cùng thư mục. Không di chuyển riêng index.html.
+4. Không cần mạng để tính giá, xem chi phí, chỉnh thông số, xuất CSV hay JSON. Link nguồn chỉ mở khi có mạng.
+
+THIẾT LẬP VÀ SAO LƯU
+Thông số được lưu tự động trên trình duyệt/đường dẫn tệp đang dùng. Một số trình duyệt hạn chế lưu đối với file local hoặc cửa sổ riêng tư; nếu không lưu được, app sẽ báo. Nên tải JSON sau khi chốt thông số. Đổi máy, đổi trình duyệt hoặc chuyển từ bản online sang offline: dùng Nhập JSON. Tệp ZIP khởi đầu bằng thông số mẫu, không tự mang thiết lập đang lưu trong bản online.
+Khôi phục mặc định đưa toàn bộ đơn, MSRP chỉnh tay và thông số về mẫu ban đầu. Nên tải JSON trước.
+
+CÁC MỐC CHI PHÍ MẪU
+Shopify Advanced Mỹ: thẻ standard 2,5% + $0,30; premium 3,1% + $0,30. PayPal Wallet từ 3,49% + $0,49. Shopify Payments/PayPal đủ điều kiện: phí bên thứ ba 0%; cổng khác Advanced mẫu 0,6% cộng phí xử lý riêng.
+Shopify Advanced $399/tháng nếu trả tháng hoặc $299/tháng quy đổi nếu trả năm. Mẫu 300 đơn/tháng để phân bổ, sửa theo thực tế.
+Thẻ quốc tế Shopify Payments +1% nếu phát sinh; FX Shopify Payments Mỹ 1,5%, PayPal Wallet 3% nếu có chuyển đổi. Markets tự động có thể đã cộng FX vào giá khách: tránh khấu trừ hai lần.
+Mẫu dự phòng hoàn trả 2%, phát sinh khác 1%, quản lý còn lại 15%. Đây không phải dữ liệu thực tế đã xác nhận. Phí đóng gói/xử lý kho để 0 vì cost có thể đã gồm; chỉ thêm phần còn thiếu.
+Thuế lợi nhuận 21% là ví dụ dự phòng tham khảo cho C-corp liên bang, KHÔNG khẳng định thuế của LLC. LLC phụ thuộc phân loại thuế/chủ sở hữu; cần kế toán xác nhận mức hiệu dụng và các thuế khác. Chỉ tính dự phòng trên lãi trước thuế dương.
+Sales tax khách trả 10% là giả định, không tự xác định theo địa chỉ. Thuế thu riêng không phải doanh thu hoặc chi phí bán hàng.
+
+CÁCH DÙNG MỚI
+Chọn trực tiếp 3 ô mã gậy đánh / phá / nhảy. Để trống là không chọn; dấu × xóa mã. Nhiều mã là combo mỗi mã 1 cây.
+Nút So sánh hiện 1 / 2 / 3 / 5 / 10 cây cùng mã; nếu đang chọn nhiều mã, chuyển tab để so sánh từng mã. Áp dụng sẽ đổi đơn sang mức mua cùng mã đó.
+Giảm mua nhiều mẫu 0 / 20 / 22 / 24 / 25%; bậc sau 2 chỉ tăng tối đa 3 điểm phần trăm mỗi bậc. Chỉnh mức nền trong bánh răng.
+Chỉ lãi sau chi phí đơn hiện ngoài và quyết định màu. Xem đầy đủ mở các loại lãi. Ngưỡng màu mẫu: dưới 25% đỏ; 25 đến dưới 35% cam; 35 đến dưới 50% xanh blue; từ 50% xanh lá. Lãi đơn <= 0 luôn đỏ.
+Cước 5 và 10 cây $17 chỉ là mẫu, cần xác nhận kho.
+
+CÔNG THỨC
+Giá thô = FLOOR(FLOOR(tổng MSRP × (1 − giảm mua nhiều)) × (1 − giảm sự kiện)).
+Giá bán = MAX(giá thô, CEIL(tổng MSRP × 60%)). Tổng giảm thực tế luôn không quá 40%, kể cả làm tròn và sự kiện.
+Tổng thu chưa thuế = tiền hàng + ship thu khách.
+Lãi gộp = tổng thu chưa thuế − cost hàng.
+Lãi sau chi phí đơn = tổng thu chưa thuế − cost − ads − ship − phí thanh toán − các biến phí/dự phòng đã khai báo.
+Lãi trước thuế = lãi sau chi phí đơn − Shopify/app/tuân thủ phân bổ − quản lý còn lại.
+Dự phòng thuế lợi nhuận = MAX(0, lãi trước thuế) × tỷ lệ dự phòng.
+Ròng tạm tính = lãi trước thuế − dự phòng thuế lợi nhuận. Đây không phải tiền payout, dòng tiền thực thu hay quyết toán thuế.
+Không cộng lại khoản đã nằm trong cost, phí dự phòng hoặc quản lý.
+
+NGUỒN CHÍNH THỨC — KIỂM TRA 07.11.2026
+https://www.shopify.com/pricing
+https://help.shopify.com/en/manual/payments/shopify-payments/transactions/credit-card-rates
+https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees
+https://help.shopify.com/en/manual/markets/customizations/local-currencies
+https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries/united-states/paypal-wallet
+https://help.shopify.com/en/manual/payments/shopify-payments/payouts/refunds
+https://help.shopify.com/en/manual/payments/shopify-payments/using-shopify-payments-with-a-third-party-provider
+https://www.irs.gov/businesses/small-businesses-self-employed/single-member-limited-liability-companies
+Danh sách sản phẩm/MSRP là bản chụp từ CUEBOTS ngày 07.11.2026, không tự đồng bộ khi offline.
